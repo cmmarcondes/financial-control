@@ -11,6 +11,8 @@ export default createGlobalStyle`
   body {
     font-size: 16px;
     overflow-x: hidden !important;
+
+    font-family: 'Montserrat';
   }
 
   html {
