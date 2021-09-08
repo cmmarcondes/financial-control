@@ -7,7 +7,7 @@ const Head: React.FC<TableProps> = ({
   children,
   title,
   color = 'black',
-  width = '100%',
+  width = '100vw',
 }) => (
   <StyledHead color={color} width={width}>
     <div className="head-title">{title}</div>
@@ -17,7 +17,7 @@ const Head: React.FC<TableProps> = ({
 
 const Data: React.FC<TableProps> = ({
   children,
-  width = '100%',
+  width = '100vw',
   color = 'black',
   textAlign = 'left',
 }) => (
@@ -30,10 +30,12 @@ const Table: React.FC<TableProps> & {
   Row: typeof Row;
   Head: typeof Head;
   Data: typeof Data;
-} = ({ children, title }) => (
+} = ({ children, title, head, body, footer }) => (
   <StyledTable>
-    <thead>{title}</thead>
-    {children}
+    {title}
+    {head && <thead>{children}</thead>}
+    {body && <thead>{children}</thead>}
+    {footer && <thead>{children}</thead>}
   </StyledTable>
 );
 

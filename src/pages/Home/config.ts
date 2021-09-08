@@ -4,4 +4,5 @@ export interface BudgetData {
   product: string;
   value: string;
   description: DescriptionTypes;
+  [key: string]: string | DescriptionTypes;
 }
